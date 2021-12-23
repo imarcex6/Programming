@@ -1,32 +1,26 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void ordenado(int, int *);
+void ordenado(int n, int lista [n]);
 
 int main() {
 
-    int N, * p, ord;
+    int N;
 
     scanf("%d", &N);
 
-    p = (int *) malloc(sizeof(int) * N);
-    if (p == NULL) {
-        printf("Sin memoria\n");
-        return -1;
-    }
+    int p[N];
 
     for (int i = 0; i < N; ++i) {
         scanf("%d", &(p[i]));
     }
 
     ordenado(N, p);
-
-    free(p);
     
     return 0;
 }
 
-void ordenado(int n, int * lista){
+void ordenado(int n, int lista [n]){
     int ord = 1, i = 0, suma = 0;
     while ( (i < n - 1) && ord ) {
         if (lista[i] > lista[i + 1]) {
