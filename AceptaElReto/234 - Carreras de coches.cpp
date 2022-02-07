@@ -7,9 +7,8 @@ int main() {
     cin.tie(NULL);
 
     int cases; cin >> cases;
-    while (cases--) {
+    for (int l = 0; l < cases; ++l) {
         int N, V; cin >> N >> V;
-        int currentV = 0;
         int arr[N];
         for (int i = 0; i < N; ++i) {
             cin >> arr[i];
